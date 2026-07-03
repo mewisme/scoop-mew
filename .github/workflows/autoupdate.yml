@@ -11,6 +11,8 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      OWNER: ${{ github.repository_owner }}
     steps:
       - uses: actions/checkout@v4
 
@@ -18,9 +20,9 @@ jobs:
         run: |
           while IFS= read -r pkg; do
             name=$(echo "$pkg" | jq -r '.name')
-            repo=$(echo "$pkg" | jq -r '.repo')
             asset=$(echo "$pkg" | jq -r '.asset')
-            target=$(echo "$pkg" | jq -r '.target')
+            repo="${OWNER}/${name}"
+            target="bucket/${asset}"
 
             echo "::group::Syncing $name from $repo"
             release=$(curl -sfSL "https://api.github.com/repos/$repo/releases/latest") || {
