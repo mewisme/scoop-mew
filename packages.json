@@ -1,0 +1,11 @@
+{
+  "packages": [
+    {
+      "name": "wrec",
+      "repo": "mewisme/wrec",
+      "asset": "wrec.json",
+      "target": "bucket/wrec.json",
+      "enabled": true
+    }
+  ]
+}

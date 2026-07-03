@@ -1,0 +1,80 @@
+name: Auto-update manifests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync manifests
+        run: |
+          while IFS= read -r pkg; do
+            name=$(echo "$pkg" | jq -r '.name')
+            repo=$(echo "$pkg" | jq -r '.repo')
+            asset=$(echo "$pkg" | jq -r '.asset')
+            target=$(echo "$pkg" | jq -r '.target')
+
+            echo "::group::Syncing $name from $repo"
+            release=$(curl -sfSL "https://api.github.com/repos/$repo/releases/latest") || {
+              echo "::error::Failed to fetch latest release for $name ($repo)"
+              echo "::endgroup::"
+              continue
+            }
+
+            tag=$(echo "$release" | jq -r '.tag_name')
+            url=$(echo "$release" | jq -r --arg asset "$asset" '.assets[] | select(.name == $asset) | .browser_download_url')
+
+            if [ -z "$url" ] || [ "$url" = "null" ]; then
+              echo "::error::Asset $asset not found in release $tag for $name"
+              echo "::endgroup::"
+              continue
+            fi
+
+            tmp=$(mktemp)
+            curl -sfSL "$url" -o "$tmp" || {
+              echo "::error::Failed to download $asset for $name"
+              rm -f "$tmp"
+              echo "::endgroup::"
+              continue
+            }
+
+            jq empty "$tmp" 2>/dev/null || {
+              echo "::error::Downloaded content is not valid JSON for $name"
+              rm -f "$tmp"
+              echo "::endgroup::"
+              continue
+            }
+
+            version="${tag#v}"
+            manifest_version=$(jq -r '.version // empty' "$tmp")
+            if [ -n "$manifest_version" ] && [ "$manifest_version" != "$version" ]; then
+              echo "::warning::Manifest version ($manifest_version) does not match release tag ($version) for $name"
+            fi
+
+            mkdir -p "$(dirname "$target")"
+            if cmp -s "$tmp" "$target" 2>/dev/null; then
+              echo "$target already up to date ($tag)"
+              rm -f "$tmp"
+            else
+              mv "$tmp" "$target"
+              echo "Updated $target to $tag"
+            fi
+            echo "::endgroup::"
+          done < <(jq -c '.packages[] | select(.enabled == true)' packages.json)
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bucket/
+          git diff --staged --quiet && { echo "No manifest changes"; exit 0; }
+          git commit -m "chore: sync scoop manifests"
+          git push
