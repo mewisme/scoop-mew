@@ -2,8 +2,10 @@ name: Auto-update manifests
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [sync-package]
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
 
 permissions:
   contents: write
@@ -13,11 +15,26 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OWNER: ${{ github.repository_owner }}
+      SYNC_NAME: ${{ github.event.client_payload.name || '' }}
+      SYNC_TAG: ${{ github.event.client_payload.tag || '' }}
     steps:
       - uses: actions/checkout@v7
 
       - name: Sync manifests
         run: |
+          if [ -n "$SYNC_NAME" ]; then
+            count=$(jq --arg name "$SYNC_NAME" '[.packages[] | select(.enabled == true and .name == $name)] | length' registry.json)
+            if [ "$count" -eq 0 ]; then
+              echo "::error::Package $SYNC_NAME not found or not enabled in registry.json"
+              exit 1
+            fi
+            jq_filter='.packages[] | select(.enabled == true and .name == $name)'
+            jq_args=(--arg name "$SYNC_NAME")
+          else
+            jq_filter='.packages[] | select(.enabled == true)'
+            jq_args=()
+          fi
+
           while IFS= read -r pkg; do
             name=$(echo "$pkg" | jq -r '.name')
             asset=$(echo "$pkg" | jq -r '.asset')
@@ -25,11 +42,19 @@ jobs:
             target="bucket/${asset}"
 
             echo "::group::Syncing $name from $repo"
-            release=$(curl -sfSL "https://api.github.com/repos/$repo/releases/latest") || {
-              echo "::error::Failed to fetch latest release for $name ($repo)"
-              echo "::endgroup::"
-              continue
-            }
+            if [ -n "$SYNC_TAG" ]; then
+              release=$(curl -sfSL "https://api.github.com/repos/$repo/releases/tags/$SYNC_TAG") || {
+                echo "::error::Failed to fetch release $SYNC_TAG for $name ($repo)"
+                echo "::endgroup::"
+                continue
+              }
+            else
+              release=$(curl -sfSL "https://api.github.com/repos/$repo/releases/latest") || {
+                echo "::error::Failed to fetch latest release for $name ($repo)"
+                echo "::endgroup::"
+                continue
+              }
+            fi
 
             tag=$(echo "$release" | jq -r '.tag_name')
             url=$(echo "$release" | jq -r --arg asset "$asset" '.assets[] | select(.name == $asset) | .browser_download_url')
@@ -70,7 +95,7 @@ jobs:
               echo "Updated $target to $tag"
             fi
             echo "::endgroup::"
-          done < <(jq -c '.packages[] | select(.enabled == true)' packages.json)
+          done < <(jq -c "${jq_args[@]}" "$jq_filter" registry.json)
 
       - name: Commit and push
         run: |
