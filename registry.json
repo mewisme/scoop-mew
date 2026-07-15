@@ -4,6 +4,11 @@
       "name": "wrec",
       "asset": "wrec.json",
       "enabled": true
+    },
+    {
+      "name": "initrule",
+      "asset": "initrule.json",
+      "enabled": true
     }
   ]
 }
