@@ -1,0 +1,22 @@
+{
+    "version": "0.0.5",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.5/initrule_0.0.5_windows_amd64.zip",
+            "bin": [
+                "initrule.exe"
+            ],
+            "hash": "01ea64036048f9859a4bd169ae5ed635eaaac635675e1cfc6f5a9cd7cf4ec2d5"
+        },
+        "arm64": {
+            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.5/initrule_0.0.5_windows_arm64.zip",
+            "bin": [
+                "initrule.exe"
+            ],
+            "hash": "c276fa727cb39bc1862bb6e49add897a395238cae7f7bcaa8a2b3692fde773ad"
+        }
+    },
+    "homepage": "https://github.com/mewisme/initrule",
+    "license": "MIT",
+    "description": "CLI to install Cursor rule files (.cursor/rules/*.mdc) into a project"
+}
