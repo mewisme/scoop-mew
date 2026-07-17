@@ -1,12 +1,12 @@
 {
-    "version": "0.0.3",
+    "version": "0.0.4",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/vutils/releases/download/v0.0.3/vutils_0.0.3_windows_amd64.zip",
+            "url": "https://github.com/mewisme/vutils/releases/download/v0.0.4/vutils_0.0.4_windows_amd64.zip",
             "bin": [
                 "vutils.exe"
             ],
-            "hash": "44d813c0eb48c75d7a815bc34b885b7423d940ba8d8baec653de64a48fdf3956"
+            "hash": "f4a1d210b7320eb7d74089f493a30e94bdf5a533c25039419e1a29300acd6709"
         }
     },
     "homepage": "https://github.com/mewisme/vutils",
