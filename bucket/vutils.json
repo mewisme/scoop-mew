@@ -1,15 +1,21 @@
 {
-    "version": "0.0.2",
+    "version": "0.0.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/vutils/releases/download/v0.0.2/vutils_0.0.2_windows_amd64.zip",
+            "url": "https://github.com/mewisme/vutils/releases/download/v0.0.3/vutils_0.0.3_windows_amd64.zip",
             "bin": [
                 "vutils.exe"
             ],
-            "hash": "b2af713224fbc31f5e527550f694bb872ccf7210f9bbcc5856a52f36b71003fc"
+            "hash": "44d813c0eb48c75d7a815bc34b885b7423d940ba8d8baec653de64a48fdf3956"
         }
     },
     "homepage": "https://github.com/mewisme/vutils",
     "license": "MIT",
-    "description": "Standalone Windows minimap guide overlay (no Valorant process access)"
+    "description": "Standalone Windows minimap guide overlay (no Valorant process access)",
+    "shortcuts": [
+        [
+            "vutils.exe",
+            "Valorant Utils"
+        ]
+    ]
 }
