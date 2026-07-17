@@ -9,6 +9,11 @@
       "name": "initrule",
       "asset": "initrule.json",
       "enabled": true
+    },
+    {
+      "name": "vutils",
+      "asset": "vutils.json",
+      "enabled": true
     }
   ]
 }
