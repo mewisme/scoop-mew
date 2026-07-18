@@ -1,26 +1,26 @@
 {
-    "version": "0.0.13",
+    "version": "0.0.14",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.13/initrule_0.0.13_windows_386.zip",
+            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_386.zip",
             "bin": [
                 "initrule.exe"
             ],
-            "hash": "c6404f1ca2ec773a4ed83da2d79ba81fb4f5a73ca61c263e3e9de73dc159c959"
+            "hash": "4ddd5b22d23559ac04c1ee8e1eed08d3005ec6ede44142c772eea82289b5e629"
         },
         "64bit": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.13/initrule_0.0.13_windows_amd64.zip",
+            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_amd64.zip",
             "bin": [
                 "initrule.exe"
             ],
-            "hash": "1097650b820cb88bae30ea37a72ff210ccc9c35f0986846d1b22af8af9ecfac3"
+            "hash": "972cd640a7a6c3d92f61652308770c2938070b94ced4c1f1a5d6ef6d82e08431"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.13/initrule_0.0.13_windows_arm64.zip",
+            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_arm64.zip",
             "bin": [
                 "initrule.exe"
             ],
-            "hash": "8a11a6b3d413dea82478320983c2ba522787d0d4ba9239edc1e5172ac585e709"
+            "hash": "6c647d60350e0b7ae8616709cb939c53e31cf447ee47cd82eb02f2f83a69559d"
         }
     },
     "homepage": "https://github.com/mewisme/initrule",
