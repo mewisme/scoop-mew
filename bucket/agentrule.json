@@ -1,29 +1,29 @@
 {
-    "version": "0.0.14",
+    "version": "0.1.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_386.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_386.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "4ddd5b22d23559ac04c1ee8e1eed08d3005ec6ede44142c772eea82289b5e629"
+            "hash": "17989b8f904b6b94fa002d95e37ae2a257f1c737d3393c559985cee37b9ef419"
         },
         "64bit": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_amd64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_amd64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "972cd640a7a6c3d92f61652308770c2938070b94ced4c1f1a5d6ef6d82e08431"
+            "hash": "6df6c716a99f687a37d083e49ed6dbe54579e9a77881e8f913b24c2f3f4366a0"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_arm64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_arm64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "6c647d60350e0b7ae8616709cb939c53e31cf447ee47cd82eb02f2f83a69559d"
+            "hash": "8a42a9e91c5bc959f4f93044f0fc7bb28efea0ee6feef1e38c48b8acfe5d15d7"
         }
     },
     "homepage": "https://github.com/mewisme/agentrule",
     "license": "MIT",
-    "description": "CLI to install Cursor rule files (.cursor/rules/*.mdc) into a project"
+    "description": "CLI to install agent instruction rules across Cursor, Claude, Codex, and more"
 }
