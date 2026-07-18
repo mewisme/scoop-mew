@@ -13,7 +13,7 @@ scoop install mew/<package>
 
 | Package | Description |
 |---|---|
-| [agentrule](https://github.com/mewisme/agentrule) | CLI to install Cursor rule files (`.cursor/rules/*.mdc`) into a project |
+| [agentrule](https://github.com/mewisme/agentrule) | CLI to install agent instruction rules across Cursor, Claude, Codex, and more |
 | [vutils](https://github.com/mewisme/vutils) | Standalone Windows minimap guide overlay (no Valorant process access) |
 | [wrec](https://github.com/mewisme/wrec) | Record one or more Windows windows into a single MP4 |
 
