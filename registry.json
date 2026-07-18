@@ -6,8 +6,8 @@
       "enabled": true
     },
     {
-      "name": "initrule",
-      "asset": "initrule.json",
+      "name": "agentrule",
+      "asset": "agentrule.json",
       "enabled": true
     },
     {

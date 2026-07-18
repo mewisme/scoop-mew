@@ -13,12 +13,12 @@ scoop install mew/<package>
 
 | Package | Description |
 |---|---|
-| [initrule](https://github.com/mewisme/initrule) | CLI to install Cursor rule files (`.cursor/rules/*.mdc`) into a project |
+| [agentrule](https://github.com/mewisme/agentrule) | CLI to install Cursor rule files (`.cursor/rules/*.mdc`) into a project |
 | [vutils](https://github.com/mewisme/vutils) | Standalone Windows minimap guide overlay (no Valorant process access) |
 | [wrec](https://github.com/mewisme/wrec) | Record one or more Windows windows into a single MP4 |
 
 ```powershell
-scoop install mew/initrule
+scoop install mew/agentrule
 scoop install mew/vutils
 scoop install mew/wrec
 ```

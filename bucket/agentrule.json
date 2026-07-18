@@ -2,28 +2,28 @@
     "version": "0.0.14",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_386.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_386.zip",
             "bin": [
-                "initrule.exe"
+                "agentrule.exe"
             ],
             "hash": "4ddd5b22d23559ac04c1ee8e1eed08d3005ec6ede44142c772eea82289b5e629"
         },
         "64bit": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_amd64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_amd64.zip",
             "bin": [
-                "initrule.exe"
+                "agentrule.exe"
             ],
             "hash": "972cd640a7a6c3d92f61652308770c2938070b94ced4c1f1a5d6ef6d82e08431"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/initrule/releases/download/v0.0.14/initrule_0.0.14_windows_arm64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.0.14/agentrule_0.0.14_windows_arm64.zip",
             "bin": [
-                "initrule.exe"
+                "agentrule.exe"
             ],
             "hash": "6c647d60350e0b7ae8616709cb939c53e31cf447ee47cd82eb02f2f83a69559d"
         }
     },
-    "homepage": "https://github.com/mewisme/initrule",
+    "homepage": "https://github.com/mewisme/agentrule",
     "license": "MIT",
     "description": "CLI to install Cursor rule files (.cursor/rules/*.mdc) into a project"
 }
