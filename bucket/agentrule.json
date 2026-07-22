@@ -1,26 +1,26 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_386.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.1/agentrule_0.1.1_windows_386.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "17989b8f904b6b94fa002d95e37ae2a257f1c737d3393c559985cee37b9ef419"
+            "hash": "5ad5763e6d22cd2f304acad3caba5a3a0a617c25ac3d9c6d5ea9643f822e3b5a"
         },
         "64bit": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_amd64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.1/agentrule_0.1.1_windows_amd64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "6df6c716a99f687a37d083e49ed6dbe54579e9a77881e8f913b24c2f3f4366a0"
+            "hash": "ac0aac74ccf938ca19e70e41eee11a27517c757aeb40a1cf9937f4e6365d1730"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.0/agentrule_0.1.0_windows_arm64.zip",
+            "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.1/agentrule_0.1.1_windows_arm64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "8a42a9e91c5bc959f4f93044f0fc7bb28efea0ee6feef1e38c48b8acfe5d15d7"
+            "hash": "a1a63cd3cb23a6a8c5190fa6f3c2d87e5ed615dfe578aff8cd3311bc7aee86ba"
         }
     },
     "homepage": "https://github.com/mewisme/agentrule",
