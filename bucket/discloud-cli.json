@@ -1,0 +1,22 @@
+{
+    "version": "0.1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.1/discloud_0.1.1_windows_amd64.zip",
+            "bin": [
+                "discloud-cli.exe"
+            ],
+            "hash": "c6880f6aa434218df8412773829348a9f8e757e8494234aed5b1e4eb5660c81d"
+        },
+        "arm64": {
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.1/discloud_0.1.1_windows_arm64.zip",
+            "bin": [
+                "discloud-cli.exe"
+            ],
+            "hash": "ba945303fae720cb46603e82a311220e2145f28ff4c378257e44e17cea67fce2"
+        }
+    },
+    "homepage": "https://github.com/mewisme/discloud-go",
+    "license": "MIT",
+    "description": "CLI client for DisCloud (Discord-backed file storage)"
+}
