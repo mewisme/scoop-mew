@@ -14,11 +14,13 @@ scoop install mew/<package>
 | Package | Description |
 |---|---|
 | [agentrule](https://github.com/mewisme/agentrule) | CLI to install agent instruction rules across Cursor, Claude, Codex, and more |
+| [discloud](https://github.com/mewisme/discloud) | Unlimited cloud storage using Discord |
 | [vutils](https://github.com/mewisme/vutils) | Standalone Windows minimap guide overlay (no Valorant process access) |
 | [wrec](https://github.com/mewisme/wrec) | Record one or more Windows windows into a single MP4 |
 
 ```powershell
 scoop install mew/agentrule
+scoop install mew/discloud
 scoop install mew/vutils
 scoop install mew/wrec
 ```

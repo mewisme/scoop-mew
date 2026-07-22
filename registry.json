@@ -14,6 +14,11 @@
       "name": "vutils",
       "asset": "vutils.json",
       "enabled": true
+    },
+    {
+      "name": "discloud",
+      "asset": "discloud.json",
+      "enabled": true
     }
   ]
 }
