@@ -16,8 +16,9 @@
       "enabled": true
     },
     {
-      "name": "discloud",
-      "asset": "discloud.json",
+      "name": "discloud-cli",
+      "repo": "discloud-go",
+      "asset": "discloud-cli.json",
       "enabled": true
     }
   ]

@@ -5,7 +5,7 @@ description: Add a new package to the scoop-mew Scoop bucket. Updates registry.j
 
 # Add package to scoop-mew
 
-Wire a new package into this bucket. Repo name under the same GitHub owner **is** the package name.
+Wire a new package into this bucket. By default the GitHub repo name under the same owner **is** the package name. Override with optional `repo` when they differ.
 
 ## Prerequisites
 
@@ -13,12 +13,13 @@ User must give (or confirm):
 
 | Input | Default |
 |---|---|
-| `name` | required — GitHub repo / Scoop package name |
+| `name` | required — Scoop package / local manifest stem (`mew/<name>`) |
+| `repo` | optional — GitHub repo slug if different from `name` |
 | `description` | from release manifest `.description` if present |
 | `asset` | `<name>.json` |
 | `enabled` | `true` |
 
-Package must already publish a Scoop manifest as a release asset (e.g. `vutils.json` on `mewisme/vutils` releases). Autoupdate fetches from `https://github.com/<owner>/<name>/releases`.
+Package must already publish a Scoop manifest as a release asset (e.g. `discloud-cli.json` on `mewisme/discloud-go` releases). Autoupdate fetches from `https://github.com/<owner>/<repo\|name>/releases`.
 
 ## Checklist
 
@@ -36,19 +37,31 @@ Append under `packages` (keep existing order style; new entry at end is fine):
 }
 ```
 
+When GitHub repo ≠ package name:
+
+```json
+{
+  "name": "discloud-cli",
+  "repo": "discloud-go",
+  "asset": "discloud-cli.json",
+  "enabled": true
+}
+```
+
 Valid JSON only — trailing commas break CI `jq`.
 
-### 2. Seed `bucket/<asset>`
+### 2. Seed `bucket/<name>.json`
 
-Fetch latest release asset into `bucket/<name>.json` so install works before the next scheduled sync:
+Fetch latest release asset into `bucket/<name>.json` (local path uses `name`, not necessarily the asset filename) so install works before the next scheduled sync:
 
 ```powershell
 $owner = (gh repo view --json owner -q .owner.login)  # this bucket's owner
 $name = "<name>"
-$asset = "$name.json"
-$url = gh api "repos/$owner/$name/releases/latest" --jq ".assets[] | select(.name == `"$asset`") | .browser_download_url"
-if (-not $url) { throw "Asset $asset missing on $owner/$name latest release" }
-curl.exe -fsSL $url -o "bucket/$asset"
+$repo = "<repo>"   # defaults to $name
+$asset = "<asset>" # e.g. discloud-cli.json
+$url = gh api "repos/$owner/$repo/releases/latest" --jq ".assets[] | select(.name == `"$asset`") | .browser_download_url"
+if (-not $url) { throw "Asset $asset missing on $owner/$repo latest release" }
+curl.exe -fsSL $url -o "bucket/$name.json"
 ```
 
 If fetch fails or asset missing: stop and tell the user the package must ship `<name>.json` on its latest GitHub release. Do **not** hand-write a fake manifest.
