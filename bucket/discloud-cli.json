@@ -1,22 +1,25 @@
 {
-    "version": "0.1.4",
+    "version": "0.1.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.4/discloud-cli_0.1.4_windows_amd64.zip",
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.5/discloud-cli_0.1.5_windows_amd64.zip",
             "bin": [
                 "discloud-cli.exe"
             ],
-            "hash": "78859f2576d7b75440e8aa461554161d18822b88f2d7d0da7e64f32d3f7d8a19"
+            "hash": "2f49231e5bfaf240e5379915f533367e3c530d09551c2f71a9dddfb82eed4a60"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.4/discloud-cli_0.1.4_windows_arm64.zip",
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.1.5/discloud-cli_0.1.5_windows_arm64.zip",
             "bin": [
                 "discloud-cli.exe"
             ],
-            "hash": "a2126d95afa04d54cc9becdafa29a22955926cfce2aea8e73fc3ee9ec17d37ab"
+            "hash": "9cac3360fa484bcb4b02b0556fcc5a0fd5ef8aef1688b304744846baf5ad5dde"
         }
     },
     "homepage": "https://github.com/mewisme/discloud-go",
     "license": "MIT",
-    "description": "CLI client for DisCloud (Discord-backed file storage)"
+    "description": "CLI client for DisCloud (Discord-backed file storage)",
+    "post_install": [
+        "shim \"$dir\\discloud-cli.exe\" $global discloud"
+    ]
 }
