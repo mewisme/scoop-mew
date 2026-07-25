@@ -1,19 +1,19 @@
 {
-    "version": "0.3.5",
+    "version": "0.3.6",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.3.5/discloud-cli_0.3.5_windows_amd64.zip",
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.3.6/discloud-cli_0.3.6_windows_amd64.zip",
             "bin": [
                 "discloud-cli.exe"
             ],
-            "hash": "38e8e754974d87511b66ac95026ad57278519d019349809921831eaf43a78135"
+            "hash": "116b622485fcf54bfc8e0403e024660e8c4702eb0267283661daea84b8a379d0"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.3.5/discloud-cli_0.3.5_windows_arm64.zip",
+            "url": "https://github.com/mewisme/discloud-go/releases/download/v0.3.6/discloud-cli_0.3.6_windows_arm64.zip",
             "bin": [
                 "discloud-cli.exe"
             ],
-            "hash": "54e8f69de7ecf14934355543705ab5d982e040e9cae1344ed2960e4bf5334dca"
+            "hash": "6613127a7eef7088e0c681749480fab12fc3f8f0f533f66ec767a369779576f3"
         }
     },
     "homepage": "https://github.com/mewisme/discloud-go",
