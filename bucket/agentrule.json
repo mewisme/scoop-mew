@@ -6,21 +6,21 @@
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "b688589f0973900281edf880c25f46d0094d3d8b1ec00bad69f43f41b8545477"
+            "hash": "fe53046cd34a977f31a36204e96281fa6d06cda3ff20df16be7e06c5b3ff4b0a"
         },
         "64bit": {
             "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.4/agentrule_0.1.4_windows_amd64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "571d255cde36e98f93f932fd1b36fd8995c2033c343d54d5b88c21f8fb126edb"
+            "hash": "42aa8007b41215a4347fa35568be4d46404bc18446b68750f43df0fa9d770604"
         },
         "arm64": {
             "url": "https://github.com/mewisme/agentrule/releases/download/v0.1.4/agentrule_0.1.4_windows_arm64.zip",
             "bin": [
                 "agentrule.exe"
             ],
-            "hash": "bbfe18781d8a1918ed0fcb60a7f80788ff945980ec76dde19110eb60002fb9ec"
+            "hash": "8a45a4d0570bd1e5c39219501cbe27892ad61553de07cc732995bf05488c42a1"
         }
     },
     "homepage": "https://github.com/mewisme/agentrule",
