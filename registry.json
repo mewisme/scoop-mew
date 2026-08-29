@@ -20,6 +20,11 @@
       "repo": "discloud-go",
       "asset": "discloud-cli.json",
       "enabled": true
+    },
+    {
+      "name": "chatgpt-mcp",
+      "asset": "chatgpt-mcp.json",
+      "enabled": true
     }
   ]
 }
