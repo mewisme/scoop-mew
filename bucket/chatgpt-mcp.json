@@ -1,0 +1,22 @@
+{
+    "version": "0.0.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.0.2/chatgpt-mcp_0.0.2_windows_amd64.zip",
+            "bin": [
+                "chatgpt-mcp.exe"
+            ],
+            "hash": "ebe2e720d0dab0d2d17f69265cd263b70d26365f4ca738160f066fb2b12a9d73"
+        },
+        "arm64": {
+            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.0.2/chatgpt-mcp_0.0.2_windows_arm64.zip",
+            "bin": [
+                "chatgpt-mcp.exe"
+            ],
+            "hash": "9544fdfa6c06bdd6f9058c1fa0e940f28b808157be7e18e3e0b5fe6807c511cf"
+        }
+    },
+    "homepage": "https://github.com/mewisme/chatgpt-mcp",
+    "license": "MIT",
+    "description": "Self-hosted MCP 2026-07-28 runtime with local tools, upstream MCP aggregation, and OpenAI tunnel support"
+}
