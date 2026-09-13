@@ -1,8 +1,8 @@
 {
-    "version": "0.2.19",
+    "version": "0.2.20",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.2.19/chatgpt-mcp_0.2.19_windows_amd64.zip",
+            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.2.20/chatgpt-mcp_0.2.20_windows_amd64.zip",
             "bin": [
                 [
                     "chatgpt-mcp.exe",
@@ -13,10 +13,10 @@
                     "cgm"
                 ]
             ],
-            "hash": "19d41db4ecc5ea6c12551b1667288cb6ce619d3c5cb3a01ea4e3c0be74ff94ed"
+            "hash": "502f197ac6f3eced67bc2e18bf949ec7ebe3fdfb85eed1ac4d56e5c862ee8d8c"
         },
         "arm64": {
-            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.2.19/chatgpt-mcp_0.2.19_windows_arm64.zip",
+            "url": "https://github.com/mewisme/chatgpt-mcp/releases/download/v0.2.20/chatgpt-mcp_0.2.20_windows_arm64.zip",
             "bin": [
                 [
                     "chatgpt-mcp.exe",
@@ -27,7 +27,7 @@
                     "cgm"
                 ]
             ],
-            "hash": "d57d5ab70bbee247aca67d9c0456dc6589577b0ecf7e6c865ca43421854a42f5"
+            "hash": "96ffd044c77be0c3f108cbabb8c1b4bad3c7409274d5de8ce7547e57379d7c38"
         }
     },
     "homepage": "https://github.com/mewisme/chatgpt-mcp",
