@@ -22,8 +22,8 @@
       "enabled": true
     },
     {
-      "name": "chatgpt-mcp",
-      "asset": "chatgpt-mcp.json",
+      "name": "codemcp",
+      "asset": "codemcp.json",
       "enabled": true
     }
   ]
