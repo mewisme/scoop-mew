@@ -161,10 +161,10 @@ jobs:
           
           ## Install
           
-          \`\`\`powershell
+          ```powershell
           scoop bucket add mew https://github.com/mewisme/scoop-mew
           scoop install mew/<package>
-          \`\`\`
+          ```
           
           ## Packages
           
@@ -172,10 +172,10 @@ jobs:
           |---|---|---|
           EOF
             cat "$table_rows"
-            printf '\n\`\`\`powershell\n'
+            printf '\n```powershell\n'
             cat "$installs"
             cat <<'EOF'
-          \`\`\`
+          ```
           
           Manifests sync daily from each package's GitHub release asset (`*.json`).
           EOF
