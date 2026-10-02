@@ -1,0 +1,15 @@
+{
+    "version": "0.3.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mewisme/codemcp/releases/download/v0.3.1/codemcp_windows_amd64.zip",
+            "bin": [
+                "cm.exe"
+            ],
+            "hash": "2b66ec74d699f76e2d28582c89244de59069b19afdbce9d76674fac27349de25"
+        }
+    },
+    "homepage": "https://github.com/mewisme/codemcp",
+    "license": "MIT",
+    "description": "A secure, workspace-bound MCP bridge connecting ChatGPT, Claude, and other AI agents to your machine."
+}
