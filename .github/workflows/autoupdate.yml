@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OWNER: ${{ github.repository_owner }}
-      SYNC_NAME: ${{ github.event.client_payload.name }}
-      SYNC_TAG: ${{ github.event.client_payload.tag }}
+      SYNC_NAME: ${{ github.event.client_payload.name || '' }}
+      SYNC_TAG: ${{ github.event.client_payload.tag || '' }}
     steps:
       - uses: actions/checkout@v7
 
@@ -155,30 +155,30 @@ jobs:
 
           {
             cat <<EOF
-# scoop-mew
-
-Scoop bucket for [mewisme](https://github.com/mewisme) packages.
-
-## Install
-
-\`\`\`powershell
-scoop bucket add mew https://github.com/mewisme/scoop-mew
-scoop install mew/<package>
-\`\`\`
-
-## Packages
-
-| Package | Version | Description |
-|---|---|---|
-EOF
+          # scoop-mew
+          
+          Scoop bucket for [mewisme](https://github.com/mewisme) packages.
+          
+          ## Install
+          
+          \`\`\`powershell
+          scoop bucket add mew https://github.com/mewisme/scoop-mew
+          scoop install mew/<package>
+          \`\`\`
+          
+          ## Packages
+          
+          | Package | Version | Description |
+          |---|---|---|
+          EOF
             cat "$table_rows"
             printf '\n\`\`\`powershell\n'
             cat "$installs"
             cat <<'EOF'
-\`\`\`
-
-Manifests sync daily from each package's GitHub release asset (`*.json`).
-EOF
+          \`\`\`
+          
+          Manifests sync daily from each package's GitHub release asset (`*.json`).
+          EOF
           } > README.md
 
           rm -f "$table_rows" "$installs"
