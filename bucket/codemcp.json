@@ -1,12 +1,12 @@
 {
-    "version": "0.3.1",
+    "version": "0.3.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mewisme/codemcp/releases/download/v0.3.1/codemcp_windows_amd64.zip",
+            "url": "https://github.com/mewisme/codemcp/releases/download/v0.3.2/codemcp_windows_amd64.zip",
             "bin": [
                 "cm.exe"
             ],
-            "hash": "7c321bf8c77a2a003d86dbc97882a37860e295654b24e96cc4eaa9c87f789714"
+            "hash": "c1685fff7a43db84a93fc1901f98a6a1ffbf11b799f218df67930b62ed19dc97"
         }
     },
     "homepage": "https://github.com/mewisme/codemcp",
