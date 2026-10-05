@@ -14,7 +14,7 @@ scoop install mew/<package>
 | Package | Version | Description |
 |---|---|---|
 | [agentrule](https://github.com/mewisme/agentrule) | 0.1.4 | CLI to install agent instruction rules across Cursor, Claude, Codex, and more |
-| [codemcp](https://github.com/mewisme/codemcp) | 0.3.2 | A secure, workspace-bound MCP bridge connecting ChatGPT, Claude, and other AI agents to your machine. |
+| [codemcp](https://github.com/mewisme/codemcp) | 0.3.3 | CodeMCP is a workspace-aware execution, context, and agent orchestration server for AI clients. |
 | [discloud-cli](https://github.com/mewisme/discloud-go) | 0.3.6 | CLI client for DisCloud (Discord-backed file storage) |
 | [vutils](https://github.com/mewisme/vutils) | 0.0.5 | Standalone Windows minimap guide overlay (no Valorant process access) |
 | [wrec](https://github.com/mewisme/wrec) | 0.3.1 | Record one or more Windows windows into a single MP4 |
